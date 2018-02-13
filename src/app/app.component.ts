@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (this.location.path() =='' || this.location.path() == '/home') {
-      this.router.navigate(['/home/dashboard']);
+      this.router.navigate(['/home/market']);
     }
   }
 
