@@ -1,50 +1,34 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { BrowserModule  } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent }   from './dashboard/dashboard.component';
-import { UserComponent }   from './user/user.component';
-import { TableComponent }   from './table/table.component';
-import { TypographyComponent }   from './typography/typography.component';
-import { IconsComponent }   from './icons/icons.component';
-import { MapsComponent }   from './maps/maps.component';
-import { NotificationsComponent }   from './notifications/notifications.component';
-import { UpgradeComponent }   from './upgrade/upgrade.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
+// import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-export const AppRoutes: Routes = [
-    {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full',
-    },
-    {
-        path: 'dashboard',
-        component: DashboardComponent
-    },
-    {
-        path: 'user',
-        component: UserComponent
-    },
-    {
-        path: 'table',
-        component: TableComponent
-    },
-    {
-        path: 'typography',
-        component: TypographyComponent
-    },
-    {
-        path: 'icons',
-        component: IconsComponent
-    },
-    {
-        path: 'maps',
-        component: MapsComponent
-    },
-    {
-        path: 'notifications',
-        component: NotificationsComponent
-    },
-    {
-        path: 'upgrade',
-        component: UpgradeComponent
-    }
-]
+
+const routes: Routes =[
+      { path: 'home',      component: HomeComponent },
+      { path: 'login',     component: LoginComponent },
+      { path: 'signup',    component: SignupComponent },
+      { path: '',          redirectTo: 'home', pathMatch: 'full' },
+      // { path: '**',        component: NotFoundComponent },
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
+  exports: [
+    RouterModule
+  ],
+})
+export class AppRoutingModule { }
+
