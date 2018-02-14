@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 .btn-yellow{ 
     background-color: #ffdd33;
 
 }
 .btn-yellow:hover{ 
     background-color: #c8ac00;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
 }
 

@@ -1,17 +1,15 @@
 <div class="card">
   <div class="card-header card-chart">
-    <a href="#" class="thumbnail">
       <img src={{item.photo}}>
-    </a>
     <div class="ct-chart" id="dailySalesChart"></div>
   </div>
   <div class="card-content">
-    <div class="row">
-      <div class="col-md-8">
+    <div class="item-row">
+      <div>
         <h4 class="title">{{item.title}}</h4>
         <p class="category">${{item.price}}</p>
       </div>
-      <div class="col-md-4">
+      <div>
        <div> 
            <a href="#" class="btn btn-xs btn-round btn-yellow">
             <i class="material-icons">add_shopping_cart</i>
@@ -21,8 +19,11 @@
     </div>
   </div>
   <div class="card-footer">
-    <div class="stats">
-      <i class="material-icons">access_time</i> updated 4 minutes ago
+    <div >
+    <rating [(ngModel)]="item.rate"
+        [max]="5"
+        [readonly]="true">
+    </rating>
     </div>
   </div>
 </div>

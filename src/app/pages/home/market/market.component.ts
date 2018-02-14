@@ -13,6 +13,7 @@ export class MarketComponent implements OnInit {
         title:"Shoe",
         photo:"assets/img/shoe1.jpg",
         price:85,
+        rate:4,
     }
   constructor() { }
 

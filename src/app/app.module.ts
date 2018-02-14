@@ -9,6 +9,9 @@ import { PagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 
+import {RatingModule} from "ngx-rating";
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -18,9 +21,12 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     RouterModule,
+    RatingModule,
 
     AppRoutingModule,
     PagesModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
