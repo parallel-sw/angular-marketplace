@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ITEMS } from 'mock/items';
+
 
 declare function require(path: string): any;
 
@@ -9,12 +12,8 @@ declare function require(path: string): any;
 })
 export class MarketComponent implements OnInit {
 
-    item={
-        title:"Shoe",
-        photo:"assets/img/shoe1.jpg",
-        price:85,
-        rate:4,
-    }
+    
+  items=ITEMS;
   constructor() { }
 
   ngOnInit() {
