@@ -9,6 +9,11 @@ declare function require(path: string): any;
 })
 export class MarketComponent implements OnInit {
 
+    item={
+        title:"Shoe",
+        photo:"assets/img/shoe1.jpg",
+        price:85,
+    }
   constructor() { }
 
   ngOnInit() {

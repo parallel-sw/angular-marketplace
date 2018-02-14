@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   imports: [
@@ -16,13 +17,15 @@ import { LoaderComponent } from './loader/loader.component';
     FooterComponent, 
     NavbarComponent, 
     SidebarComponent,
-    LoaderComponent
+    LoaderComponent,
+    ItemComponent
   ],
   exports: [
     FooterComponent, 
     NavbarComponent, 
     SidebarComponent, 
-    LoaderComponent
+    LoaderComponent,
+    ItemComponent
   ]
 })
 export class ComponentsModule { }
