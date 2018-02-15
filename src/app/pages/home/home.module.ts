@@ -15,6 +15,10 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { MarketComponent } from './market/market.component';
+import { ShirtsComponent } from './shirts/shirts.component';
+import { ShortsComponent } from './shorts/shorts.component';
+import { FootwearComponent } from './footwear/footwear.component';
+import { PantsComponent } from './pants/pants.component';
 
 @NgModule({
   imports: [
@@ -35,7 +39,11 @@ import { MarketComponent } from './market/market.component';
     MapsComponent, 
     NotificationsComponent, 
     UpgradeComponent,
-    MarketComponent
+    MarketComponent,
+    ShirtsComponent,
+    ShortsComponent,
+    FootwearComponent,
+    PantsComponent,
   ]
 })
 export class HomeModule { }

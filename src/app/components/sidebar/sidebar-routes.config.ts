@@ -2,6 +2,10 @@ import {  RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
     { path: 'market', title: 'Home',  icon: 'home', class: '' },
+    { path: 'footwear', title: 'Footwear',  icon: 'school', class: '' },
+    { path: 'shirts', title: 'Shirts',  icon: 'rowing', class: '' },
+    { path: 'shorts', title: 'Shorts',  icon: 'pets', class: '' },
+    { path: 'pants', title: 'Pants',  icon: 'local_parking', class: '' },
     { path: 'dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
     { path: 'user-profile', title: 'User Profile',  icon:'person', class: '' },
     { path: 'table-list', title: 'Table List',  icon:'content_paste', class: '' },
